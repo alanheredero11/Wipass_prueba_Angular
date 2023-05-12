@@ -1,0 +1,203 @@
+.navbar {
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  min-height: 100vh;
+  padding: 2px 20px;
+  /* transition: all 100ms; */
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wipass-logo {
+  height: 80px;
+  user-select: none;
+}
+
+.nav-button-open {
+  border: none;
+  background-color: transparent;
+  transform: scaleX(-1);
+  user-select: none;
+}
+
+.user-profile {
+  border: 1px solid grey;
+  border-radius: 50px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 10px;
+  gap: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.user-photo {
+  height: 50px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-email {
+  font-size: 10px;
+  color: grey;
+}
+
+.data {
+  margin-bottom: 10px;
+  color: grey;
+  font-size: 12px;
+}
+
+.options-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.selected {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 15px;
+  border: 1px solid #6e7fe1;
+  border-radius: 50px;
+  color: #6e7fe1;
+  background-color: #f7f8fd;
+  cursor: pointer;
+  & .icon {
+    filter: invert(71%) sepia(15%) saturate(1669%) hue-rotate(198deg)
+      brightness(96%) contrast(92%);
+  }
+}
+
+.option {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  color: black;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.option:hover {
+  border: 1px solid #6e7fe1;
+  border-radius: 50px;
+  color: #6e7fe1;
+  background-color: #f7f8fd;
+  cursor: pointer;
+  & .icon {
+    filter: invert(71%) sepia(15%) saturate(1669%) hue-rotate(198deg)
+      brightness(96%) contrast(92%);
+  }
+}
+
+.display-icon {
+  cursor: pointer;
+}
+
+.icon {
+  height: 25px;
+}
+
+/* menau close */
+
+.navbar-menu-close {
+  width: 120px;
+  height: 100%;
+  background-color: white;
+  min-height: 100vh;
+  padding: 2px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  transition: all 200ms;
+}
+
+.nav-button-menu-close {
+  background-color: transparent;
+  border: none;
+  transform: scaleX(1);
+}
+
+.navbar-header-menu-close {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0px;
+}
+
+.logo-hidden {
+  display: none;
+}
+
+.user-profile-menu-close {
+  width: fit-content;
+  border: 1px solid grey;
+  border-radius: 50px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 10px;
+  gap: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.user-data-menu-close {
+  display: none;
+}
+
+.data-menu-close {
+  display: none;
+}
+
+.option-menu-close {
+  width: fit-content;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  color: black;
+  border: 1px solid transparent;
+}
+
+.option-menu-close:hover {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #6e7fe1;
+  border-radius: 50px;
+  color: #6e7fe1;
+  background-color: #f7f8fd;
+
+  & .icon {
+    filter: invert(71%) sepia(15%) saturate(1669%) hue-rotate(198deg)
+      brightness(96%) contrast(92%);
+  }
+}
+
+.option-text-menu-close {
+  display: none;
+}

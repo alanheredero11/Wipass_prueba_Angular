@@ -1,0 +1,9 @@
+.app_container {
+  display: flex;
+  background-color: #f9f9fb;
+}
+
+.app_header_content {
+  background-color: #f9f9fb;
+  width: 100%;
+}

@@ -1,0 +1,92 @@
+<nav [ngClass]="menu_open == true ? 'navbar' : 'navbar-menu-close'" id="navbar">
+  <div
+    [ngClass]="
+      menu_open == true ? 'navbar-header' : 'navbar-header-menu-close '
+    "
+    id="navbar_header"
+  >
+    <img
+      src="../../../assets/img/wipass-logo.png"
+      [ngClass]="menu_open == true ? 'wipass-logo' : 'logo-hidden'"
+      alt="Logo de WiPass"
+      id="wipass_logo"
+    />
+    <button
+      (click)="openCloseNavbar()"
+      [ngClass]="
+        menu_open == true ? 'nav-button-open' : 'nav-button-menu-close'
+      "
+      id="open_button"
+    >
+      <img src="../../../assets/img/open-menu.png" class="icon display-icon" />
+    </button>
+  </div>
+  <div
+    [ngClass]="menu_open == true ? 'user-profile' : 'user-profile-menu-close'"
+  >
+    <div class="user-photo">
+      <img
+        src="./assets/img/Foto Alan.jpg"
+        alt="Foto de Usuario"
+        class="user-photo"
+      />
+    </div>
+    <div [ngClass]="menu_open == true ? 'user-data' : 'user-data-menu-close'">
+      <p class="user-name">Howard Schultz</p>
+      <p class="user-email">hschultx@starbucks.es</p>
+    </div>
+  </div>
+  <div [ngClass]="menu_open == true ? 'data' : 'data-menu-close'">
+    <p>Data.</p>
+  </div>
+  <div class="options-menu">
+    <a (click)="this.tab = 0; route(' ')">
+      <div
+        [ngClass]="
+          tab == 0
+            ? 'selected'
+            : menu_open == true
+            ? 'option'
+            : 'option-menu-close'
+        "
+      >
+        <img
+          src="../../../assets/img/global.png"
+          title="Global view"
+          class="icon"
+        />
+        <p
+          [ngClass]="
+            menu_open == true ? 'option-text' : 'option-text-menu-close'
+          "
+        >
+          Global veiw
+        </p>
+      </div>
+    </a>
+    <a (click)="this.tab = 1; route('analytics')">
+      <div
+        [ngClass]="
+          tab == 1
+            ? 'selected'
+            : menu_open == true
+            ? 'option'
+            : 'option-menu-close'
+        "
+      >
+        <img
+          src="../../../assets/img/analytics.png"
+          title="Analytics"
+          class="icon"
+        />
+        <p
+          [ngClass]="
+            menu_open == true ? 'option-text' : 'option-text-menu-close'
+          "
+        >
+          Analytics
+        </p>
+      </div>
+    </a>
+  </div>
+</nav>
