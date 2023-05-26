@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Wipass';
+
+  public menu_open: boolean = true; 
+
+  navbarStatus(menu_open){
+    this.menu_open = menu_open;
+  }
 }

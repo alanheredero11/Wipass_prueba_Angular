@@ -3,7 +3,21 @@
   background-color: #f9f9fb;
 }
 
-.app_header_content {
+app-navbar {
+  position: fixed ;
+}
+
+.app_header_content-menu_open {
+  margin-left: 250px;
   background-color: #f9f9fb;
   width: 100%;
+  height: 100vh;
+}
+
+.app_header_content-menu_close {
+  margin-left: 120px;
+  background-color: #f9f9fb;
+  width: 100%;
+  transition: all 200ms;
+  height: 100vh;
 }

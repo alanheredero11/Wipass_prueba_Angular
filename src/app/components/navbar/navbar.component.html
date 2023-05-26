@@ -1,20 +1,20 @@
-<nav [ngClass]="menu_open == true ? 'navbar' : 'navbar-menu-close'" id="navbar">
+<nav [ngClass]="menu_open ? 'navbar' : 'navbar-menu-close'" id="navbar">
   <div
     [ngClass]="
-      menu_open == true ? 'navbar-header' : 'navbar-header-menu-close '
+      menu_open ? 'navbar-header' : 'navbar-header-menu-close '
     "
     id="navbar_header"
   >
     <img
       src="../../../assets/img/wipass-logo.png"
-      [ngClass]="menu_open == true ? 'wipass-logo' : 'logo-hidden'"
+      [ngClass]="menu_open ? 'wipass-logo' : 'logo-hidden'"
       alt="Logo de WiPass"
       id="wipass_logo"
     />
     <button
       (click)="openCloseNavbar()"
       [ngClass]="
-        menu_open == true ? 'nav-button-open' : 'nav-button-menu-close'
+        menu_open ? 'nav-button-open' : 'nav-button-menu-close'
       "
       id="open_button"
     >
@@ -31,12 +31,12 @@
         class="user-photo"
       />
     </div>
-    <div [ngClass]="menu_open == true ? 'user-data' : 'user-data-menu-close'">
+    <div [ngClass]="menu_open ? 'user-data' : 'user-data-menu-close'">
       <p class="user-name">Howard Schultz</p>
       <p class="user-email">hschultx@starbucks.es</p>
     </div>
   </div>
-  <div [ngClass]="menu_open == true ? 'data' : 'data-menu-close'">
+  <div [ngClass]="menu_open ? 'data' : 'data-menu-close'">
     <p>Data.</p>
   </div>
   <div class="options-menu">
@@ -45,7 +45,7 @@
         [ngClass]="
           tab == 0
             ? 'selected'
-            : menu_open == true
+            : menu_open 
             ? 'option'
             : 'option-menu-close'
         "
@@ -57,7 +57,7 @@
         />
         <p
           [ngClass]="
-            menu_open == true ? 'option-text' : 'option-text-menu-close'
+            menu_open ? 'option-text' : 'option-text-menu-close'
           "
         >
           Global veiw
@@ -69,7 +69,7 @@
         [ngClass]="
           tab == 1
             ? 'selected'
-            : menu_open == true
+            : menu_open
             ? 'option'
             : 'option-menu-close'
         "
@@ -81,7 +81,7 @@
         />
         <p
           [ngClass]="
-            menu_open == true ? 'option-text' : 'option-text-menu-close'
+            menu_open ? 'option-text' : 'option-text-menu-close'
           "
         >
           Analytics

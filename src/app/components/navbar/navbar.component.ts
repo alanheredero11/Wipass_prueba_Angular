@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent {
+  
+  @Output() navbarStatus = new EventEmitter();
+
   public menu_open: boolean = true;
   public tab = 0;
 
@@ -18,7 +21,8 @@ export class NavbarComponent {
     } else {
       this.menu_open = true;
     }
-    console.log(this.menu_open);
+    this.navbarStatus.emit(this.menu_open)
+    
   }
   route(path: string) {
     switch (path) {
