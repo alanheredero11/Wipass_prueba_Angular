@@ -7,7 +7,7 @@ import { GlobalViewComponent } from './pages/global-view/global-view.component';
 import { AnalyticsComponent } from './pages/analytics/analytics.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
-import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 @NgModule({
@@ -17,8 +17,8 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     AnalyticsComponent,
     NavbarComponent,
     HeaderComponent,
-    BarChartComponent,
-   
+    ChartComponent,
+  
   ],
   imports: [
     BrowserModule,

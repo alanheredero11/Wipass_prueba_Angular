@@ -1,27 +1,29 @@
 import { Component, Input } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Chart, registerables } from 'node_modules/chart.js';
-import { ChartModule } from 'src/app/models/bar-chart/chart.module';
+import { ChartModule } from 'src/app/models/chart.module';
 
 Chart.register(...registerables);
 
 @Component({
-  selector: 'app-bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.css']
+  selector: 'app-chart',
+  templateUrl: './chart.component.html',
+  styleUrls: ['./chart.component.css']
 })
-export class BarChartComponent implements OnInit{
-  @Input() bar_chart: ChartModule; 
+export class ChartComponent implements OnInit{
+  @Input() chart: ChartModule; 
+  @Input() style: undefined;
   
   ngOnInit(): void {
-    document.getElementById('chart_id').id = this.bar_chart.id;
+    document.getElementById('chart_id').id = this.chart.id;
     this.RenderChart();
   }
-  
+
   RenderChart() {
-    new Chart(this.bar_chart.id, {
-      type: 'bar',
-      data: this.bar_chart.data
+    new Chart(this.chart.id, {
+      type: this.chart.type,
+      data: this.chart.data,
+      options: this.chart.options
       });
   }
 

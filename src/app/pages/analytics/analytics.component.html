@@ -3,14 +3,23 @@
   <div class="landing-pages">Landing Pages</div>
   <div class="all-graphics-container">
     
-    <app-bar-chart [bar_chart]="bar_chart"></app-bar-chart>
-    <app-bar-chart [bar_chart]="bar_chart2"></app-bar-chart>
+    <app-chart [chart]="bar_chart"></app-chart>
+    <app-chart [chart]="bar_chart2"></app-chart>
+
+    <app-chart [chart]="pie_chart" [style]="'height: 300px;'"></app-chart>
+    <app-chart [chart]="pie_chart2" [style]="'height: 300px;'"></app-chart>
+
+    <app-chart [chart]="line_chart"></app-chart>
+    <app-chart [chart]="line_chart2"></app-chart>
+
+    <app-chart [chart]="bubble_chart"></app-chart>
+    <app-chart [chart]="bubble_chart2"></app-chart>
+
+    <app-chart [chart]="polar_chart"></app-chart>
+    <app-chart [chart]="polar_chart2"></app-chart>
+
+    <app-chart [chart]="radar_chart"></app-chart>
     
-    <!-- <div class="graphic-cointainer">
-      <canvas id="pie-chart"></canvas>
-    </div>
-    <div class="graphic-cointainer">
-      <canvas id="lineal-chart"></canvas>
-    </div> -->
+    
    </div>
 </div>
